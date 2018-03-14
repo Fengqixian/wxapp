@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/recharge/recharge",
+    "pages/recharge/caveat",
+    "pages/recording/recording"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Program Card",
+    "navigationBarTextStyle":"black"
+  }
+}

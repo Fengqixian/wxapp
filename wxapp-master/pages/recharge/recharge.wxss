@@ -1,0 +1,69 @@
+/* pages/recharge/recharge.wxss */
+.title_view{
+  
+  width: 100%;
+  height: 15vh;
+ 
+  background-image: url('http://qc.fsgas.com/gyqr/gsjj/201409/W020141209376239049394.jpg');
+  background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;
+}
+.station_info{
+  padding-left: 4vh;
+  width: 80%;
+  height: 25vh;
+ 
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+.gun_select{
+  width: 80%;
+  height: 35vh;
+ 
+  margin: 0 auto;
+
+}
+.stationName{
+  width: 80%;
+  height: 10vh;
+
+  font-family: "微软雅黑";
+  font-size: 18px;
+  font-weight: bold;
+
+ }
+ .priceview{
+     width: 80%;
+  height: 10vh;
+
+  font-family: "微软雅黑";
+  font-size: 18px;
+  font-weight: bold;
+ }
+ 
+ .gun_view{
+ 
+  display:inline-block;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-left: 2vh;
+  margin-top: 2vh;
+  border: 1px solid black;
+  font-size: 18px;
+ }
+ .pay{
+
+    width: 80%;
+  height: 10vh;
+
+  margin: 0 auto;
+margin-top:5vh;
+ }
+ .button_pay{
+   
+   width: 100%;
+   height: 100vh;
+   background-color: #458B00;
+   
+ }

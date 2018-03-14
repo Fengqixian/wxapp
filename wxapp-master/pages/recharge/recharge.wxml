@@ -1,0 +1,44 @@
+<view>
+    <view class="title_view">
+
+    </view>
+    <!--站点信息-->
+    <view class="station_info">
+        <view class="stationName">
+        三打哈大恒时打卡静安寺加气站
+        </view>
+        <view class="priceview">
+        <label>单价：</label>
+        <text style="font-size:24px;margin-left:4vh;color:green;">06.66</text>
+        <view></view>
+        </view>
+        <label style="font-family: '微软雅黑';color:#969696;">请选择枪号：</label>
+    </view>
+    <!--枪号选择-->
+    
+    <scroll-view scroll-y class="gun_select" >
+      
+      <view wx:for="{{gunArray}}"  class="gun_view" bindtap="cilck_gun" style='background-color:{{item[2]}}' data-id="{{item[0]}}" data-text='{{item[1]}}'>
+      
+          {{item[1]}}
+        
+      </view>
+    </scroll-view>
+    
+    <!--付款-->
+    <view class="pay">
+      <checkbox-group bindchange="bindAgreeChange">
+            <label class="weui-agree" for="weuiAgree">
+                <view class="weui-agree__text">
+                    <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+                    <view class="weui-agree__checkbox-icon">
+                        <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                    </view>
+                    阅读并同意<navigator url="../recharge/caveat" class="weui-agree__link">《相关条款》</navigator>
+                </view>
+            </label>
+        </checkbox-group>
+        
+      <button type="primary"   bindtap="cilck_pay"> 付款 </button>
+    </view>
+</view>

@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<view >
+    <view>
+        <view class="weui-search-bar">
+          
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索站点或城市</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+  <map id="SelectStationMap" class="SelectStationMap" latitude="{{latitude}}" longitude="{{longitude}}" speed="{{speed}}"  accuracy="{{accuracy}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location>
+    <!--燃料类型-->
+    <cover-view class="fueltype_border" >
+      <cover-view class="fueltype" bindtap="Selectfueltype">
+      {{fueltype}}
+      </cover-view>
+    </cover-view>
+    
+    <!--用户信息-->
+    <cover-view class="user_info" bindtap="userManager">
+        <cover-image src="/images/userlogo.png" class="cover_image">
+        </cover-image>
+    </cover-view>
+    <!--我的位置-->
+    <cover-view class="i_address"  bindtap="go_i_address">
+        <cover-image src="/images/myaddress.png" class="cover_image" >
+        </cover-image>
+    </cover-view>
+   <!--站点选择-->
+    <cover-view class="station_select" style="height:{{height}}">
+      <cover-view class="click_button"  bindtap="click_view_stationView" >
+        <cover-image src="/images/{{direction}}.png" class="up_image" >
+        </cover-image>
+      </cover-view>
+      <cover-view wx:for="{{viewColor}}">
+        <cover-view class="station_info" bindtap="go_station">
+            <cover-image class="station_logo" src="/images/addgasstation.png">
+
+            </cover-image>
+            <cover-view class="cview_title">
+                厚普001加气站
+            </cover-view>
+            <!--单价-->
+            <cover-view class="cview_price">
+                单价：
+            </cover-view>
+            <cover-view class="number_1">
+              06.06
+            </cover-view>
+           
+            
+          </cover-view>
+        <!--站点选择-->
+        <cover-view class="distance_log">
+          <cover-image src="/images/distance.png" style="width:3vh;"></cover-image>
+         </cover-view>
+        <cover-view class="distance">
+        10km
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </map>
+  
+
+</view>
